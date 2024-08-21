@@ -19,6 +19,11 @@ document.querySelector('.check').addEventListener('click', function () {
   if (!guess) {
     displayMessage('Enter a Number');
   }
+  // If out of range
+  else if (guess > 20) {
+    displayMessage('Hey! You are out of range. Choose between 1 to 20');
+    document.querySelector('body').style.backgroundColor = '#bf9111';
+  }
   // guess is correct
   else if (guess === screatNumber) {
     displayMessage('Congrats..! 🥳 Correct Answer');
