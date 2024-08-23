@@ -38,6 +38,7 @@ document.querySelector('.check').addEventListener('click', function () {
 
   //guess is wrong
   else if (guess !== screatNumber) {
+    document.querySelector('body').style.backgroundColor = '#0a0a0a';
     if (score > 1) {
       displayMessage(
         guess < screatNumber
